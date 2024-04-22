@@ -3,9 +3,16 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class ResourceLeak {
+   int data = 0;
+   String path = "file.txt";
    try {
-      FileInputStream inputStream = new FileInputStream("file.txt");
-   } catch  (IOException e) {
-      System.out.println(e);
-   }
+      FileInputStream fls = new FileInputStream(path);
+      while((data = fis.read()) != -1) {
+         System.out.write(data);
+      }
+   } catch (IOException e) {
+      e.printStackTrace();
+   }   
+   
+   
 }
