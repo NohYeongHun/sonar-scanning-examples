@@ -3,6 +3,7 @@ public class NullPointerReferecne {
 
   public void Test()
   {
+    // NullPointerException 발생
     int length = str.length();
   }
 }
