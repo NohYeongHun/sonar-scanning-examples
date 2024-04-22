@@ -3,7 +3,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ResourceManagementFailure {
-
+  String url = "";
+  String user = "user";
+  String password = "password";
+  
   public void test()
   {
     try {
