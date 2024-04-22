@@ -11,7 +11,7 @@ public class ResourceManagementFailure {
     try {
       Connection conn = DriverManager.getConnection(url, user, password);
       Statement stmt = conn.createStatement();
-    } catch(IOException e) {
+    } catch(Exception e) {
       // Connection 또는 Statement가 적절히 close()되지 않음
       e.printStackTrace();
     }
