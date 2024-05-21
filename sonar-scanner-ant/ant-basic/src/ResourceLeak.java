@@ -4,8 +4,9 @@ public class ResourceLeak {
 
   public void Test()
   {
+    FileInputStream inputStream = null;
     try {
-      FileInputStream inputStream = new FileInputStream("file.txt");
+      inputStream = new FileInputStream("file.txt");
     } catch (IOException e) {
       // inputStream을 close()하지 않음
       e.printStackTrace();
