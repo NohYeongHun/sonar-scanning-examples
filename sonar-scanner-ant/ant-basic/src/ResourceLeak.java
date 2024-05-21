@@ -12,7 +12,11 @@ public class ResourceLeak {
       e.printStackTrace();
       
     } finally {  
+      try {
       inputStream.close();
+      } catch (IOException e) {
+        //silence.
+      }
     }
     
   }
