@@ -13,7 +13,9 @@ public class ResourceLeak {
       
     } finally {  
       try {
-      inputStream.close();
+        if (inputStream !=  null) {
+          inputStream.close();
+        }
       } catch (IOException e) {
         //silence.
       }
