@@ -15,21 +15,6 @@ public class ResourceManagementFailure {
       stmt = conn.createStatement();
     } catch (Exception e) {
       e.printStackTrace();
-    } finally {
-      if (stmt != null) {
-        try { 
-          stmt.close(); 
-        } catch(Exception e) {
-          // silence
-        }
-      }
-      if (conn != null) {
-        try { 
-          conn.close(); 
-        } catch(Exception e) {
-          // silence
-        }  
-      }
     }
   }
 }
