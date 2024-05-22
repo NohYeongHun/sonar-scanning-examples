@@ -16,6 +16,13 @@ public class ResourceManagementFailure {
     } catch(Exception e) {
       // Connection 또는 Statement가 적절히 close()되지 않음
       e.printStackTrace();
+    } finally {
+      try {
+        conn.close();
+        stmt.close();
+      } catch (IOException e) {
+        // silence
+      }
     }
   }
 }
