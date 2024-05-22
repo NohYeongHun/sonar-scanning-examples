@@ -4,6 +4,9 @@ public class Nullable {
 
    public void Test()
    {
-      nullString.length();
+      if ( 1 == nullString.length())
+      {
+         
+      }
    }
 }
