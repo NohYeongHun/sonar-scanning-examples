@@ -27,7 +27,7 @@ public class ResourceManagementFailure {
         {
            stmt.close();    
         }
-      } catch (IOException e) {
+      } catch (SQLException e) {
         // silence
       }
     }
