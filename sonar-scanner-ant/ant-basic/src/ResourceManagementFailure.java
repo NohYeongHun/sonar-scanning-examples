@@ -7,10 +7,12 @@ public class ResourceManagementFailure {
   String password = "password";
   
   public void test()
-  {
+  { 
+    Connection conn = null;
+    Statement stmt = null;
     try {
-      Connection conn = DriverManager.getConnection(url, user, password);
-      Statement stmt = conn.createStatement();
+      conn = DriverManager.getConnection(url, user, password);
+      stmt = conn.createStatement();
     } catch(Exception e) {
       // Connection 또는 Statement가 적절히 close()되지 않음
       e.printStackTrace();
