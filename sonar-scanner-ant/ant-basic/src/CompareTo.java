@@ -17,7 +17,7 @@ public class CompareTo {
            throw new Exception("예산액이 사용액보다 작습니다.");
          }
       } catch (Exception e) {
-         e.printStacktrace();
+         e.printStackTrace();
       }
    }
 }
