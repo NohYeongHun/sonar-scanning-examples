@@ -18,8 +18,15 @@ public class ResourceManagementFailure {
       e.printStackTrace();
     } finally {
       try {
-        conn.close();
-        stmt.close();
+        if (conn != null)
+        {
+           conn.close();
+        }
+
+        if (stmt != null)
+        {
+           stmt.close();    
+        }
       } catch (IOException e) {
         // silence
       }
