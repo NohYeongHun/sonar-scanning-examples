@@ -10,16 +10,26 @@ public class ResourceManagementFailure {
   { 
     Connection conn = null;
     Statement stmt = null;
-    try (Connection conn = DriverManager.getConnection(url, user, password)) {
-      try (Statement stmt = conn.createStatement()) {
-        // SQL 작업 수행
-      } catch (SQLException e) {
-        // Statement 관련 예외 처리
-        e.printStackTrace();
-      }
-    } catch (SQLException e) {
-      // Connection 관련 예외 처리
+    try {
+      Connection conn = DriverManager.getConnection(url, user, password);
+      Statement stmt = conn.createStatement();
+    } catch (Exception e) {
       e.printStackTrace();
+    } finally {
+      if (stmt != null) {
+        try { 
+          stmt.close(); 
+        } catch(Exception e) {
+          // silence
+        }
+      }
+      if (conn != null) {
+        try { 
+          conn.close(); 
+        } catch(Exception e) {
+          // silence
+        }  
+      }
     }
   }
 }
