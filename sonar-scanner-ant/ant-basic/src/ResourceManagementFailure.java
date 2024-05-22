@@ -11,8 +11,8 @@ public class ResourceManagementFailure {
     Connection conn = null;
     Statement stmt = null;
     try {
-      Connection conn = DriverManager.getConnection(url, user, password);
-      Statement stmt = conn.createStatement();
+      conn = DriverManager.getConnection(url, user, password);
+      stmt = conn.createStatement();
     } catch (Exception e) {
       e.printStackTrace();
     } finally {
