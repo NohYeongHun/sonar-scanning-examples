@@ -5,7 +5,7 @@ public class ResourceManagementFailure {
   String url = "";
   String user = "user";
   String password = "password";
-
+  
   public void test()
   { 
     Connection conn = null;
@@ -15,7 +15,9 @@ public class ResourceManagementFailure {
       stmt = conn.createStatement();
     } catch (Exception e) {
       e.printStackTrace();
-    } finally {
+    }
+    /*
+      finally {
       if (stmt != null) {
         try { 
           stmt.close(); 
@@ -31,5 +33,6 @@ public class ResourceManagementFailure {
         }  
       }
     }
+    */
   }
 }
