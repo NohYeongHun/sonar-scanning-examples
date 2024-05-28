@@ -10,9 +10,7 @@ public class ResourceLeak {
     } catch (IOException e) {
       // inputStream을 close()하지 않음
       e.printStackTrace();
-    } 
-    /*
-      finally {  
+    } finally {  
       try {
         if (inputStream != null) {
           inputStream.close();
@@ -21,7 +19,6 @@ public class ResourceLeak {
         //silence.
       }
     }
-    */
   }
   
 }
